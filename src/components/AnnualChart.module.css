@@ -1,0 +1,61 @@
+/* src/components/AnnualChart.module.css */
+.section {
+  background: #0b1526;
+  border: 1px solid #1e3a5f;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem 1rem;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.chartTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d0e8f8;
+  margin: 0;
+}
+
+.rangeLabel {
+  font-size: 0.8rem;
+  color: #557a99;
+}
+
+.sliders {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.sliderLabel {
+  font-size: 0.78rem;
+  color: #7ba7cc;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.slider {
+  accent-color: #3b82d4;
+  width: 140px;
+  cursor: pointer;
+}
+
+/* Custom tooltip */
+.tooltip {
+  background: #0d1b2e;
+  border: 1px solid #2a4a6f;
+  border-radius: 7px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.82rem;
+}
+.tooltipYear { color: #7ba7cc; margin-bottom: 0.2rem; }
+.tooltipVal  { font-size: 1.1rem; font-weight: 700; }
+.tooltipNote { color: #445566; font-size: 0.7rem; margin-top: 0.2rem; }

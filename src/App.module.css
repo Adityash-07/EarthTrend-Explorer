@@ -1,0 +1,104 @@
+/* src/App.module.css */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #070d1a;
+}
+
+/* Sidebar + main content side by side */
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  min-height: 0;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: 2rem;
+  min-width: 0;        /* prevents flex children from overflowing */
+}
+
+/* Full-width chart row */
+.chartGrid {
+  padding: 0 2rem;
+  margin-bottom: 1.25rem;
+  max-width: 1400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Two-column layout for seasonal + heatmap on wider screens */
+.chartGrid2 {
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  /* Sidebar collapses to a horizontal strip on mobile */
+  .body {
+    flex-direction: column;
+  }
+  .chartGrid, .chartGrid2 {
+    padding: 0 1rem;
+  }
+  .chartGrid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Loading and error states */
+.centred {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: #070d1a;
+  color: #7ba7cc;
+  text-align: center;
+  padding: 2rem;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #1e3a5f;
+  border-top-color: #3b82d4;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loadingText { font-size: 0.9rem; color: #557a99; }
+
+.errorText   { font-size: 1.1rem; color: #fca5a5; font-weight: 600; }
+.errorDetail { font-size: 0.85rem; color: #ef9a9a; max-width: 480px; }
+.errorHint   { font-size: 0.8rem; color: #557a99; max-width: 480px; }
+.errorHint code { color: #93c5fd; background: #0d1b2e; padding: 0 4px; border-radius: 3px; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.72rem;
+  color: #2a4a6f;
+  border-top: 1px solid #0f2240;
+  margin-top: auto;
+}

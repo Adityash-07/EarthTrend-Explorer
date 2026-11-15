@@ -1,0 +1,7 @@
+node_modules/
+dist/
+EarthTrend-Explorer-Final-Backup.zip
+.env
+.env.*
+!.env.example
+.DS_Store

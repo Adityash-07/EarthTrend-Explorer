@@ -1,0 +1,42 @@
+/* src/index.css
+   Global styles — reset defaults so our dark theme looks consistent
+   across all browsers.
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", system-ui, Roboto, sans-serif;
+  background: #070d1a;
+  color: #c8dff0;
+  line-height: 1.6;
+  /* Smooth font rendering on macOS/retina screens */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make all images scale nicely */
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove default button styles so our components control appearance */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Recharts puts SVG text at 12px by default; ensure it inherits body font */
+.recharts-text {
+  font-family: inherit;
+}

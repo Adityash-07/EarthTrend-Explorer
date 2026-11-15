@@ -1,0 +1,55 @@
+/* src/components/StatsCards.module.css */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #0d1b2e;
+  border: 1px solid #1e3a5f;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b8aad;
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #e8f4fd;
+}
+
+.unit {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #93c5fd;
+}
+
+.sub {
+  font-size: 0.75rem;
+  color: #557a99;
+}
+
+/* Colour accents per card type */
+.warm  { border-left: 3px solid #f59e0b; }
+.hot   { border-left: 3px solid #ef4444; }
+.cold  { border-left: 3px solid #60a5fa; }
+.trend { border-left: 3px solid #a78bfa; }
+
+.warm  .value { color: #fcd34d; }
+.hot   .value { color: #fca5a5; }
+.cold  .value { color: #93c5fd; }
+.trend .value { color: #c4b5fd; }

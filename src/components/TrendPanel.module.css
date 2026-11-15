@@ -1,0 +1,267 @@
+/* src/components/TrendPanel.module.css */
+
+.panel {
+  background: #0b1526;
+  border: 1px solid #1e3a5f;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 1.25rem;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+.panelHeader {
+  background: linear-gradient(90deg, #0d1f3c 0%, #0b1829 100%);
+  border-bottom: 1px solid #1e3a5f;
+  padding: 0.9rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.panelTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #d0e8f8;
+  margin: 0;
+}
+
+.panelSubtitle {
+  font-size: 0.75rem;
+  color: #557a99;
+}
+
+/* ── Sections ───────────────────────────────────────────────────────────── */
+.section {
+  padding: 0.9rem 1.4rem;
+  border-bottom: 1px solid #101e33;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #3b82d4;
+  margin-bottom: 0.6rem;
+}
+
+/* ── Stat rows ──────────────────────────────────────────────────────────── */
+.statRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #0d1b2e;
+}
+
+.statRow:last-of-type { border-bottom: none; }
+
+.recommended {
+  background: rgba(74, 222, 128, 0.04);
+  border-left: 2px solid #4ade80;
+  padding-left: 0.6rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.recommendedBadge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #4ade80;
+  margin-right: 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: #557a99;
+}
+
+.statValue {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #d0e8f8;
+  font-variant-numeric: tabular-nums;
+}
+
+.statNote {
+  font-size: 0.7rem;
+  color: #3d5a78;
+  line-height: 1.4;
+  margin-top: 0.1rem;
+}
+
+/* ── Durbin-Watson row ───────────────────────────────────────────────────── */
+.dwRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.5rem 0 0.3rem;
+}
+
+/* ── Badges ──────────────────────────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 1px 8px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  vertical-align: middle;
+}
+
+.badgeGreen  { background: rgba(74, 222, 128, 0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.3); }
+.badgeAmber  { background: rgba(251, 191, 36, 0.15);  color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+.badgeRed    { background: rgba(239, 68, 68, 0.15);   color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+.badgeGrey   { background: rgba(148, 163, 184, 0.1);  color: #94a3b8; border: 1px solid rgba(148,163,184,0.2); }
+
+/* ── MK comparison boxes ─────────────────────────────────────────────────── */
+.mkCompare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 700px) {
+  .mkCompare { grid-template-columns: 1fr; }
+}
+
+.mkBox {
+  border-radius: 7px;
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.mkStandard {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #1e3a5f;
+}
+
+.mkAdjusted {
+  background: rgba(74, 222, 128, 0.05);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+.mkBoxTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #7ba7cc;
+  margin-bottom: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.mkStat {
+  font-size: 0.82rem;
+  color: #d0e8f8;
+  font-variant-numeric: tabular-nums;
+}
+
+.mkTrend {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fbbf24;
+  margin-top: 0.2rem;
+}
+
+.mkNote {
+  font-size: 0.72rem;
+  color: #557a99;
+  line-height: 1.4;
+}
+
+.mkWarning {
+  font-size: 0.7rem;
+  color: #f87171;
+  margin-top: 0.3rem;
+  line-height: 1.4;
+}
+
+/* ── Extreme note ────────────────────────────────────────────────────────── */
+.extremeNote {
+  font-size: 0.7rem;
+  color: #3d5a78;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
+/* ── Error box ───────────────────────────────────────────────────────────── */
+.errorBox {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.8rem;
+  color: #f87171;
+}
+
+/* ── Toggle buttons ──────────────────────────────────────────────────────── */
+.toggleBtn {
+  background: none;
+  border: none;
+  color: #3b82d4;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  transition: color 0.15s;
+}
+
+.toggleBtn:hover { color: #60a5fa; }
+
+/* ── Excluded years list ─────────────────────────────────────────────────── */
+.excludedList {
+  padding-left: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+.excludedList li {
+  font-size: 0.77rem;
+  color: #557a99;
+  margin-bottom: 0.2rem;
+}
+
+.excludedList li strong {
+  color: #93c5fd;
+}
+
+/* ── Insight text ────────────────────────────────────────────────────────── */
+.insightBox {
+  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.insightPara {
+  font-size: 0.82rem;
+  color: #93b5cc;
+  line-height: 1.6;
+}
+
+.caveat {
+  font-size: 0.78rem;
+  color: #557a99;
+  line-height: 1.6;
+  border-top: 1px solid #0d1b2e;
+  padding-top: 0.5rem;
+  font-style: italic;
+}
+
+.excludedSummary {
+  font-size: 0.75rem;
+  color: #3d5a78;
+  line-height: 1.5;
+  border-top: 1px solid #0d1b2e;
+  padding-top: 0.5rem;
+}
